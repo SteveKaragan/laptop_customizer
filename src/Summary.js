@@ -13,7 +13,6 @@ class Summary extends Component {
             const selectedOption = this.props.selected[feature];
       
             return (
-              //selection
               <div className="summary__option" key={featureHash}>
                 <div className="summary__option__label">{feature} </div>
                 <div className="summary__option__value">{selectedOption.name}</div>
@@ -29,7 +28,6 @@ class Summary extends Component {
             0
           );
       
-
         return(
             <section className="main__summary">
             <h2>Your cart</h2>

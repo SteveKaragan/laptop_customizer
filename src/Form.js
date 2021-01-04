@@ -14,7 +14,7 @@ class Form extends Component {
             const options = this.props.features[feature].map(item => {
               const itemHash = slugify(JSON.stringify(item));
               console.log(itemHash)
-              //option
+            
               return (
                 <div key={itemHash} className="feature__item">
                   <input
@@ -33,7 +33,6 @@ class Form extends Component {
             });
             console.log(options)
             
-            //customize
             return (
               <fieldset className="feature" key={featureHash}>
                 <legend className="feature__name">
