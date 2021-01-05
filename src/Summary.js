@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+//Total needs to be a component.  I created SumTotal.js to hold it.
+
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD'

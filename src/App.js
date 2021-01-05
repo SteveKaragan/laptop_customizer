@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './Header';
 import Form from './Form';
 import Summary from './Summary';
+
+//This is the App we did together
 
 class App extends Component {
   state = {
@@ -38,7 +39,9 @@ class App extends Component {
   
     return (
       <div className="App">
-        <Header></Header>
+        <header>
+          <h1>ELF Computing | Laptops</h1>
+        </header>
         <main>
           <Form features={this.props.features} selected={this.state.selected} updateFeature={(e)=> this.updateFeature(this.feature, this.item)}></Form>
           <Summary selected={this.state.selected}></Summary>

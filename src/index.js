@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import AppCopy from './AppCopy'
+
+//FEATURES needs to be deleted from here.  
 
 const FEATURES = {
   Processor: [
@@ -46,4 +49,4 @@ const FEATURES = {
   ]
 };
 
-ReactDOM.render(<App features={FEATURES}/>, document.getElementById('root'));
+ReactDOM.render(<AppCopy features={FEATURES}/>, document.getElementById('root'));
