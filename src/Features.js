@@ -1,5 +1,5 @@
 
-const FEATURES = {
+const Features = {
     Processor: [
       {
         name: '17th Generation Intel Core HB (7 Core with donut spare)',
@@ -42,4 +42,4 @@ const FEATURES = {
     ]
   };
 
-  export default FEATURES;
+  export default Features;
