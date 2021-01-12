@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Form from './Form';
 import Summary from './Summary';
-
-//This is the App we did together
+import FeatureList from './FeatureList';
 
 class App extends Component {
   state = {
@@ -28,6 +26,7 @@ class App extends Component {
   };
 
   updateFeature = (feature, newValue) => {
+    debugger;
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({
@@ -43,7 +42,9 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <Form features={this.props.features} selected={this.state.selected} updateFeature={(e)=> this.updateFeature(this.feature, this.item)}></Form>
+          <FeatureList features={this.props.features} 
+          selected={this.state.selected} 
+          updateFeature={(feature, item)=> this.updateFeature(feature, item)}/>
           <Summary selected={this.state.selected}></Summary>
         </main>
       </div>
