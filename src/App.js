@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
 import Summary from './Summary';
-import FeatureList from './FeatureList';
+import Customizations from './Customizations';
+
+// Normalizes string as a slug - a string that is safe to use
+// in both URLs and html attributes
+import slugify from 'slugify';
+
+import './App.css';
+
+// This object will allow us to
+// easily convert numbers into US dollar values
+const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD'
+});
 
 class App extends Component {
   state = {
@@ -34,23 +46,26 @@ class App extends Component {
   };
 
   render() {
-  
+
     return (
       <div className="App">
         <header>
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <FeatureList features={this.props.features} 
-          selected={this.state.selected} 
-          //updateFeature={(feature, item) => this.updateFeature(feature, item)}
-          updateFeature={this.updateFeature}
-          />
-          <Summary selected={this.state.selected}></Summary>
+          <form className="main__form">
+            <h2>Customize your laptop</h2>
+            <Customizations 
+              features={this.props.features}
+              selected={this.state.selected}
+              updateFeature={this.updateFeature}
+              />
+          </form>
+            <Summary selected={this.state.selected}/>
         </main>
       </div>
     );
-  };
-};
+  }
+}
 
 export default App;
