@@ -43,7 +43,9 @@ class App extends Component {
         <main>
           <FeatureList features={this.props.features} 
           selected={this.state.selected} 
-          updateFeature={(feature, item)=> this.updateFeature(feature, item)}/>
+          //updateFeature={(feature, item) => this.updateFeature(feature, item)}
+          updateFeature={this.updateFeature}
+          />
           <Summary selected={this.state.selected}></Summary>
         </main>
       </div>
