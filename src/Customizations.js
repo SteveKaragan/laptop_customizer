@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FeatureOptions from './FeatureOptions'
-import './App.css';
+import './Customizations.css';
 
 export default class Customizations extends Component {
 

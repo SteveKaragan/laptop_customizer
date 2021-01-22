@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Selections from './Selections';
 import Total from './Total'
-import './App.css';
+import './Summary.css';
 
 export default class Summary extends Component {
     render() {

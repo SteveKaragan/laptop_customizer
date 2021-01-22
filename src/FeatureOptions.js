@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import slugify from 'slugify';
 import Option from './Option'
-import './App.css';
+import './FeatureOptions.css';
 
 export default class FeatureOptions extends Component {
     render() {
@@ -21,7 +21,6 @@ export default class FeatureOptions extends Component {
         return (
             <div>
                 {options}
-
             </div>
         );
     };
