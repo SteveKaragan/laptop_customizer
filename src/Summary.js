@@ -13,6 +13,6 @@ export default class Summary extends Component {
                     <Total selected={this.props.selected}/>
                 </section>   
             </div>
-        )
-    }
-}
+        );
+    };
+};

@@ -6,6 +6,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     currency: 'USD'
   });
 
+
 export default class Selections extends Component {
     render() {
         const summary = Object.keys(this.props.selected).map((feature, idx) => {
@@ -25,6 +26,5 @@ export default class Selections extends Component {
         return (
             <div>{summary}</div>
         )
-    }
-
-}
+    };
+};

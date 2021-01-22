@@ -12,7 +12,6 @@ export default class Total extends Component {
             (acc, curr) => acc + this.props.selected[curr].cost,
                 0
               );
-        console.log(total)
         return (
             <div className="summary__total">
                 <div className="summary__total__label">Total</div>
@@ -21,8 +20,5 @@ export default class Total extends Component {
                 </div>
             </div>
         )
-    }
-
-
-
-}
+    };
+};

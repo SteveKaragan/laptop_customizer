@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
 import Summary from './Summary';
 import Customizations from './Customizations';
-
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-import slugify from 'slugify';
-
 import './App.css';
 
-// This object will allow us to
-// easily convert numbers into US dollar values
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-});
 
 class App extends Component {
   state = {
@@ -46,7 +35,6 @@ class App extends Component {
   };
 
   render() {
-
     return (
       <div className="App">
         <header>
@@ -65,7 +53,7 @@ class App extends Component {
         </main>
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;
